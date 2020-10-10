@@ -14,11 +14,12 @@ print(x)
 
 
 # This nested function has a similar problem.
-
+# https://www.codesdope.com/blog/article/nested-function-scope-of-variable-closures-in-pyth/
 def outer():
     y = 120
 
     def inner():
+        nonlocal y
         y = 999
 
     inner()
